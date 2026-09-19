@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phishing Awareness Training</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #08111f;
+            color: white;
+            min-height: 100vh;
+        }
+
+        .presentation {
+            width: 100%;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 30px;
+        }
+
+        .slide {
+            display: none;
+            width: 90%;
+            max-width: 1100px;
+            min-height: 650px;
+            padding: 60px;
+            border-radius: 25px;
+            background: linear-gradient(145deg, #101d33, #0b1425);
+            box-shadow: 0 20px 60px rgba(0,0,0,.5);
+            animation: fade .4s ease;
+        }
+
+        .slide.active {
+            display: block;
+        }
+
+        @keyframes fade {
+            from { opacity: 0; transform: translateY(15px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .tag {
+            display: inline-block;
+            background: #163c63;
+            padding: 8px 16px;
+            border-radius: 20px;
+            color: #5ec8ff;
+            margin-bottom: 25px;
+            font-weight: bold;
+        }
+
+        h1 {
+            font-size: 58px;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            font-size: 42px;
+            margin-bottom: 30px;
+        }
+
+        h3 {
+            font-size: 25px;
+            margin-bottom: 12px;
+        }
+
+        p, li {
+            font-size: 21px;
+            line-height: 1.6;
+        }
+
+        ul {
+            padding-left: 30px;
+        }
+
+        li {
+            margin: 15px 0;
+        }
+
+        .highlight {
+            color: #58d6ff;
+        }
+
+        .danger {
+            color: #ff6969;
+        }
+
+        .safe {
+            color: #67e59a;
+        }
+
+        .card-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin-top: 25px;
+        }
+
+        .card {
+            background: #14243b;
+            padding: 25px;
+            border-radius: 18px;
+            border: 1px solid #263c59;
+        }
+
+        .quiz {
+            margin-top: 20px;
+        }
+
+        .option {
+            display: block;
+            width: 100%;
+            padding: 16px;
+            margin: 12px 0;
+            background: #172a44;
+            color: white;
+            border: 1px solid #34506f;
+            border-radius: 12px;
+            text-align: left;
+            font-size: 18px;
+            cursor: pointer;
+        }
+
+        .option:hover {
+            background: #21466b;
+        }
+
+        .correct {
+            background: #17613b !important;
+        }
+
+        .wrong {
+            background: #7b2929 !important;
+        }
+
+        .feedback {
+            margin-top: 15px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .controls {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 12px;
+        }
+
+        button.nav {
+            border: none;
+            background: #168dcc;
+            color: white;
+            padding: 12px 22px;
+            border-radius: 10px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button.nav:hover {
+            background: #20a9ed;
+        }
+
+        .counter {
+            position: fixed;
+            top: 20px;
+            right: 25px;
+            background: #14243b;
+            padding: 10px 18px;
+            border-radius: 20px;
+        }
+
+        .fake-email {
+            background: white;
+            color: #111;
+            padding: 25px;
+            border-radius: 15px;
+            margin-top: 20px;
+        }
+
+        .fake-email .warning {
+            color: #d00000;
+            font-weight: bold;
+        }
+
+        @media(max-width: 700px) {
+            .slide {
+                padding: 30px;
+                min-height: 600px;
+            }
+
+            h1 {
+                font-size: 40px;
+            }
+
+            h2 {
+                font-size: 30px;
+            }
+
+            p, li {
+                font-size: 17px;
+            }
+
+            .card-container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="presentation">
+
+    <!-- SLIDE 1 -->
+    <section class="slide active">
+        <span class="tag">CYBERSECURITY TRAINING</span>
+        <h1>Phishing <span class="highlight">Attacks</span></h1>
+        <p>
+            Learn how to identify suspicious emails, fake login pages,
+            fraudulent websites and social engineering attacks.
+        </p>
+
+        <br>
+
+        <h3>🛡️ STOP • CHECK • VERIFY</h3>
+    </section>
+
+
+    <!-- SLIDE 2 -->
+    <section class="slide">
+        <span class="tag">01</span>
+        <h2>What is Phishing?</h2>
+
+        <p>
+            Phishing is a cyberattack where criminals pretend to be a
+            trusted person, company or service to trick you into giving
+            away sensitive information.
+        </p>
+
+        <ul>
+            <li>🔑 Passwords and usernames</li>
+            <li>💳 Banking and card information</li>
+            <li>📱 OTPs and verification codes</li>
+            <li>👤 Personal information</li>
+            <li>💰 Money</li>
+        </ul>
+    </section>
+
+
+    <!-- SLIDE 3 -->
+    <section class="slide">
+        <span class="tag">02</span>
+        <h2>How to Spot a Suspicious Email</h2>
+
+        <div class="card-container">
+            <div class="card">
+                <h3>📧 Check the Sender</h3>
+                <p>Look carefully at the email address. Fake addresses often contain small spelling changes.</p>
+            </div>
+
+            <div class="card">
+                <h3>🚨 Urgent Messages</h3>
+                <p>Be suspicious of messages demanding immediate action.</p>
+            </div>
+
+            <div class="card">
+                <h3>🔗 Check Links</h3>
+                <p>Hover over links and inspect the real destination before clicking.</p>
+            </div>
+
+            <div class="card">
+                <h3>📎 Attachments</h3>
+                <p>Do not open unexpected attachments, especially from unknown senders.</p>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- SLIDE 4 -->
+    <section class="slide">
+        <span class="tag">03</span>
+        <h2>Example: Phishing Email</h2>
+
+        <div class="fake-email">
+            <p><b>From:</b> security@paypa1-support.example</p>
+            <hr><br>
+
+            <h3>Your account has been locked!</h3>
+
+            <p class="warning">
+                ⚠️ You must verify your account within 30 minutes
+                or your account will be permanently deleted.
+            </p>
+
+            <br>
+
+            <p>
+                Click here to verify your account immediately.
+            </p>
+
+            <br>
+
+            <p>🚨 <b>Red flags:</b></p>
+            <ul>
+                <li>Urgent threat</li>
+                <li>Suspicious sender address</li>
+                <li>Unexpected login request</li>
+            </ul>
+        </div>
+    </section>
+
+
+    <!-- SLIDE 5 -->
+    <section class="slide">
+        <span class="tag">04</span>
+        <h2>Fake Login Pages</h2>
+
+        <ul>
+            <li>🔍 Carefully check the website address.</li>
+            <li>✏️ Look for spelling mistakes in the domain.</li>
+            <li>🔐 HTTPS does NOT automatically mean the website is legitimate.</li>
+            <li>🚫 Avoid logging in through links received unexpectedly.</li>
+            <li>🌐 Open the official website yourself instead.</li>
+        </ul>
+
+        <br>
+
+        <div class="card">
+            <h3 class="danger">Remember!</h3>
+            <p>
+                A website can look exactly like the real one and still be
+                designed to steal your password.
+            </p>
+        </div>
+    </section>
+
+
+    <!-- SLIDE 6 -->
+    <section class="slide">
+        <span class="tag">05</span>
+        <h2>Fraudulent Websites</h2>
+
+        <div class="card-container">
+            <div class="card">
+                <h3>🌐 Strange Domain</h3>
+                <p>The website address does not match the real organization.</p>
+            </div>
+
+            <div class="card">
+                <h3>💸 Unrealistic Offers</h3>
+                <p>Huge discounts, prizes or rewards can be bait.</p>
+            </div>
+
+            <div class="card">
+                <h3>⏱️ Countdown Timers</h3>
+                <p>Fake urgency is commonly used to pressure victims.</p>
+            </div>
+
+            <div class="card">
+                <h3>⚠️ Pop-ups</h3>
+                <p>Unexpected warnings asking for downloads or personal information are suspicious.</p>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- SLIDE 7 -->
+    <section class="slide">
+        <span class="tag">06</span>
+        <h2>Social Engineering Techniques</h2>
+
+        <ul>
+            <li><b>Impersonation:</b> Pretending to be a bank, teacher, boss or friend.</li>
+            <li><b>Urgency:</b> Pressuring you to act immediately.</li>
+            <li><b>Fear:</b> Claiming your account or money is in danger.</li>
+            <li><b>Reward:</b> Offering prizes, refunds or free gifts.</li>
+            <li><b>Authority:</b> Pretending to be an important official.</li>
+            <li><b>Curiosity:</b> Sending shocking or tempting links.</li>
+        </ul>
+    </section>
+
+
+    <!-- SLIDE 8 -->
+    <section class="slide">
+        <span class="tag">07</span>
+        <h2>Case Study: Fake Bank Alert</h2>
+
+        <div class="card">
+            <h3>Scenario</h3>
+            <p>
+                You receive a message saying:
+                <b>"Suspicious activity detected. Verify your bank account immediately."</b>
+            </p>
+        </div>
+
+        <br>
+
+        <div class="card">
+            <h3 class="danger">What are the warning signs?</h3>
+            <p>
+                Urgency + unexpected message + login link + suspicious website.
+            </p>
+        </div>
+
+        <br>
+
+        <div class="card">
+            <h3 class="safe">Safe Response</h3>
+            <p>
+                Do not click the link. Open your bank's official app or
+                website yourself and check your account.
+            </p>
+        </div>
+    </section>
+
+
+    <!-- SLIDE 9 -->
+    <section class="slide">
+        <span class="tag">08</span>
+        <h2>Real-Life Example: CEO Fraud</h2>
+
+        <p>
+            A criminal may pretend to be a company manager and ask an
+            employee to urgently transfer money or buy gift cards.
+        </p>
+
+        <br>
+
+        <ul>
+            <li>🚨 The request is unusual.</li>
+            <li>⏱️ The attacker creates urgency.</li>
+            <li>🤫 They may ask the employee not to tell anyone.</li>
+            <li>📞 The request should be verified through another trusted method.</li>
+        </ul>
+    </section>
+
+
+    <!-- SLIDE 10 -->
+    <section class="slide">
+        <span class="tag">09</span>
+        <h2>How to Stay Safe</h2>
+
+        <ul>
+            <li>🛑 Stop before clicking.</li>
+            <li>🔍 Check the sender and website address.</li>
+            <li>🔐 Use strong, unique passwords.</li>
+            <li>📱 Enable Multi-Factor Authentication (MFA).</li>
+            <li>💻 Keep your software and browser updated.</li>
+            <li>🚫 Never share passwords, PINs or OTPs.</li>
+            <li>📢 Report suspicious messages.</li>
+        </ul>
+    </section>
+
+
+    <!-- SLIDE 11 -->
+    <section class="slide">
+        <span class="tag">10</span>
+        <h2>🧠 Quick Quiz</h2>
+
+        <div class="quiz">
+            <h3>Q1. You receive an urgent email asking you to log in. What should you do?</h3>
+
+            <button class="option" onclick="answer(this, false)">
+                A. Click the link immediately
+            </button>
+
+            <button class="option" onclick="answer(this, true)">
+                B. Open the official website yourself
+            </button>
+
+            <button class="option" onclick="answer(this, false)">
+                C. Reply with your password
+            </button>
+
+            <div class="feedback"></div>
+        </div>
+    </section>
+
+
+    <!-- SLIDE 12 -->
+    <section class="slide">
+        <span class="tag">11</span>
+        <h2>🧠 Quiz 2</h2>
+
+        <div class="quiz">
+            <h3>Q2. Which is a common phishing warning sign?</h3>
+
+            <button class="option" onclick="answer(this, true)">
+                A. Unexpected attachment
+            </button>
+
+            <button class="option" onclick="answer(this, false)">
+                B. A receipt you were expecting
+            </button>
+
+            <button class="option" onclick="answer(this, false)">
+                C. A normal message from a trusted contact
+            </button>
+
+            <div class="feedback"></div>
+        </div>
+    </section>
+
+
+    <!-- SLIDE 13 -->
+    <section class="slide">
+        <span class="tag">12</span>
+        <h2>🧠 Quiz 3</h2>
+
+        <div class="quiz">
+            <h3>Q3. Does HTTPS alone prove that a website is legitimate?</h3>
+
+            <button class="option" onclick="answer(this, false)">
+                A. Yes
+            </button>
+
+            <button class="option" onclick="answer(this, true)">
+                B. No
+            </button>
+
+            <div class="feedback"></div>
+        </div>
+    </section>
+
+
+    <!-- FINAL -->
+    <section class="slide">
+        <span class="tag">FINAL</span>
+        <h1>Stay <span class="safe">Safe.</span></h1>
+
+        <p>
+            Phishing attacks succeed when people act without checking.
+        </p>
+
+        <br>
+
+        <div class="card">
+            <h2>🛡️ STOP → CHECK → VERIFY</h2>
+
+            <p>
+                Before clicking a link, opening an attachment, logging in,
+                sharing information or sending money — take a moment to verify.
+            </p>
+        </div>
+
+        <br>
+
+        <h3 class="highlight">One careful pause can prevent a major security problem.</h3>
+    </section>
+
+</div>
+
+
+<div class="counter">
+    <span id="current">1</span> / <span id="total"></span>
+</div>
+
+<div class="controls">
+    <button class="nav" onclick="previousSlide()">← Previous</button>
+    <button class="nav" onclick="nextSlide()">Next →</button>
+</div>
+
+
+<script>
+
+    let currentSlide = 0;
+
+    const slides = document.querySelectorAll(".slide");
+
+    document.getElementById("total").textContent = slides.length;
+
+    function showSlide(index) {
+
+        if (index < 0) {
+            index = 0;
+        }
+
+        if (index >= slides.length) {
+            index = slides.length - 1;
+        }
+
+        slides.forEach(slide => {
+            slide.classList.remove("active");
+        });
+
+        slides[index].classList.add("active");
+
+        currentSlide = index;
+
+        document.getElementById("current").textContent = index + 1;
+    }
+
+    function nextSlide() {
+        showSlide(currentSlide + 1);
+    }
+
+    function previousSlide() {
+        showSlide(currentSlide - 1);
+    }
+
+    function answer(button, correct) {
+
+        const quiz = button.parentElement;
+        const options = quiz.querySelectorAll(".option");
+        const feedback = quiz.querySelector(".feedback");
+
+        options.forEach(option => {
+            option.disabled = true;
+        });
+
+        if (correct) {
+            button.classList.add("correct");
+            feedback.textContent = "✅ Correct! Good job.";
+            feedback.style.color = "#67e59a";
+        } else {
+            button.classList.add("wrong");
+            feedback.textContent = "❌ Incorrect. Think before you click!";
+            feedback.style.color = "#ff6969";
+        }
+    }
+
+    document.addEventListener("keydown", function(event) {
+
+        if (event.key === "ArrowRight") {
+            nextSlide();
+        }
+
+        if (event.key === "ArrowLeft") {
+            previousSlide();
+        }
+
+    });
+
+</script>
+
+</body>
+</html>
